@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+    --dark-secondary:#212529;
+    --bg-purple:#663399;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: var(--dark-secondary);
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+#header {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: var(--bg-purple);
+}
+
+#header>label {
+    font-size: 25px;
+    margin: 25px;
+    color: white;
+}
+
+#gallows {
+    display: flex;
+    width: 40%;
+    background-color: rgb(240, 240, 240);
+    height: 70vh;
+    align-self: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    border-radius: 10px;
+
+
+}
+
+#letter {
+    display: flex;
+    width: 40%;
+    background-color: blue;
+    height: 70vh;
+    margin: 0 auto;
+}
+
+#footer {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: var(--bg-purple);
+}
+
+#footer>label {
+    font-size: 25px;
+    margin: auto;
+    color: white;
+}
+
+#word {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#word>p {
+    color: rgb(5, 28, 92);
+    text-align: center;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+#canva {
+    width: 100%;
+    height: 80%;
+}
+
+.keyButtons{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+.btn-word{
+   width: 50px;
+   margin: 2px;
+   border-radius: 5px;
+}
+.btn-word:hover{
+background-color:rgb(216, 216, 216);
+}
+#tip{
+   color: white;
+   font-size:35px;
+}

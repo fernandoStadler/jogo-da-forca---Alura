@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+    <style>
+     
+    </style>
+    <header id="header">
+        <label>Hangman</label>
+    </header>
+    <main>
+        <section id="gallows">
+            <div id="canva">
+                <canvas width="600" height="400" />
+            </div>
+            <div id="word">
+                <p id="latter"></p>
+           
+        </section>
+        <section>
+            <label id="tip"></label>
+        </section>
+        <section id="keyboard">
+            <div class="keyButtons">
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="q" value="q">Q</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="w" value="w">W</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="e" value="e">E</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="r" value="r">R</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="t" value="t">T</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="y" value="y">Y</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="u" value="u">U</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="i" value="i">I</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="o" value="o">O</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="p" value="p">p</button>
+            </div>
+            <div class="keyButtons">
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="a" value="a">A</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="s" value="s">S</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="d" value="d">D</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="f" value="f">F</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="g" value="g">G</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="h" value="h">H</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="j" value="j">J</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="k" value="k">K</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="l" value="l">L</button>
+            </div>
+            <div class="keyButtons">
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="z" value="z">Z</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="x" value="x">X</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="c" value="c">C</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="v" value="v">V</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="b" value="b">B</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="n" value="n">N</button>
+                <button class="btn-word" onclick="getKeyValue(this.value)" id="m" value="m">M</button>                
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <label>&copy; Fernando Stadler - 2022</label>
+    </footer>
+    <script src="js/dictionary.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/app.js"></script>
+</html>
