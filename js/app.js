@@ -1,34 +1,67 @@
-let tip = document.getElementById('tip');
-let latter = document.getElementById('latter');
-var canvas = document.querySelector('canvas');
 
 
-let size = Dictionary.length;
-let index = randomPosition(size);
-let tempWord = [];
-let key={letter:""};
+
+for (position = 0; position < words.length; position++) {
+    let span = document.createElement("span");
+    span.setAttribute('id', position);
+    let div = document.getElementById("word");
+    div.appendChild(span);
+}
 
 
-var letraTemporaria = key.letter;
-
-
-function raffleWords() {
-    let words = Dictionary[index].word;
-    let clues = Dictionary[index].clue;
-    tip.innerHTML = `dica: ${clues}`;
+for (position = 0; position < key.length; position++) {
+    let button = document.createElement("button");
+    let letter = document.createTextNode(key[position]);
     
-    for (var i = 0; i < words.length; i++) {
-  
-        latter.innerHTML += "*"
+    button.appendChild(letter);
+    button.setAttribute('onclick', 'escolheLetra(\''+key[position]+'\')');
+    button.setAttribute('id', key[position]);
+    
+    let div = document.getElementById("btns")
+    div.appendChild(button);
+}
+function escolheLetra(letra) {
+
+    let  correct = false;
+    
+    for (position = 0; position < words.length; position++) {
+        if (letra === words[position]) {
+            let span = document.getElementById(position);
+            let l = document.createTextNode(letra);
+            
+            span.appendChild(l);
+            
+            let button = document.getElementById(letra);
+            button.setAttribute('class', 'certa');
+            button.removeAttribute('onclick');
+            
+            hits++;
+            correct = true;
+        }
+    }
+    
+    if (correct === false) {
+        
+        
+        var button = document.getElementById(letra);
+        button.setAttribute('class', 'errada');
+        button.removeAttribute('onclick');
+        
+        chance--;
+    }
+    
+    if (chance === 0) {
+     
+        alert("perdeu nessa porra")
+    }
+    
+    if (hits === words.length) {
+        alert("Ganhou nessa porra")
     }
 }
 
-function getKeyValue(keys) {
-    
-    return key.letter = latter.innerHTML = keys
-}
 
-raffleWords();
+tip.innerHTML = `dica: ${clues}`;
 
 draw(3, 5, 4, 350, "blue");
 draw(3, 5, 200, 4, "blue");
