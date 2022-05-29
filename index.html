@@ -30,7 +30,9 @@ button {
     width: 35px;
     padding: 10px 0;
     background-color: #663399;
+    box-shadow: 0px 0px 15px #663399;
     color: #000000;
+    border: none;
     border-radius: 5px;
     font-weight: bold;
     font-size: 18px;
@@ -64,6 +66,7 @@ button.novo-bt {
     flex-wrap: wrap;
     width: 100%;
     padding: 5px;
+    border-radius: 10px;
     margin-top: 10px;
     background-color: #181818;
     justify-content: center;
@@ -75,14 +78,51 @@ button.novo-bt {
     display:flex;
     position: relative;
 }
-    </style>
-    <header id="header">
-        <label>Hangman</label>
-    </header>
-    <main>
-        <section id="gallows">
-            <div id="canva">
-                <canvas width="600" height="400" />
+
+#modal{
+    display: none;
+    background-color: #663399;
+    box-shadow: 0px 0px 34px #663399;
+    width: 350px;
+    height: 250px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    font-size: 35px;
+}
+#dark{
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.808);
+    height: 100vh;
+    z-index: 1;
+}
+#m-button>button{
+    width: 250px;
+    background-color: #14f132;
+    box-shadow: 0px 0px 34px #14f132;
+
+    border-radius: 10px;
+    font-size: 35px;
+}
+</style>
+<header id="header">
+    <label>Hangman</label>
+</header>
+<main>
+    <div id="dark">
+        
+    </div>
+    <section id="gallows">
+        <div id="canva">
+            <canvas width="600" height="400" />
+            width: 250px;
             </div>
             <div id="word">
                 
@@ -90,11 +130,22 @@ button.novo-bt {
             <div id="btns">
                 
             </div>
-                
+            
+            
+        </section>
+        <section id="modal">
+            <div>
+                <p>Parabéns, você ganhou!</p>
+            </div>
+            <div id="m-button">
+                <button>Jogar novamente</button>
+            </div>
         </section>
         <section id="d-tip">
             <label id="tip"></label>
         </section>
+        
+        
         
     </main>
     <footer id="footer">

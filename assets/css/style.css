@@ -39,7 +39,8 @@ main {
 #gallows {
     display: flex;
     width: 50%;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(218, 218, 218);
+    box-shadow: 10px 1px 50px 5px #663399;
     height: 70vh;
     align-self: center;
     margin: 0 auto;
