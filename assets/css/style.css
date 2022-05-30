@@ -9,12 +9,9 @@
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
 }
-
 body{
     overflow-x: hidden;
     background-color: var(--dark-secondary);
-
-
 }
 main {
     width: 100%;
@@ -26,7 +23,6 @@ main {
     flex-direction: column;
 
 }
-
 #header {
     display: flex;
     width: 100%;
@@ -101,6 +97,7 @@ main {
     font-size: 25px;
     margin: auto;
     color: white;
+    text-align: center;
 }
 
 #word {
@@ -218,7 +215,6 @@ button:hover {
     border-radius: 10px;
     font-size: 35px;
 }
-
 #m-button>button {
     width: 250px;
     background-color: #14f132;
@@ -226,7 +222,6 @@ button:hover {
     border-radius: 10px;
     font-size: 35px;
 }
-
 #m-button>button:hover {
     background-color: #07c520
 }
