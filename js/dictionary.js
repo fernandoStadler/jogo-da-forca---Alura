@@ -1,4 +1,4 @@
- const Dictionary = [
+ let Dictionary = [
    {
      "word":'abacaxi',
      "clue":'fruta',

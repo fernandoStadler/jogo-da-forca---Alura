@@ -1,6 +1,9 @@
 
 let tip = document.getElementById('tip');
-var canvas = document.querySelector('canvas');
+let canvas = document.querySelector('canvas');
+let darkScreen = document.getElementById('dark');
+let modal_alert = document.getElementById('modal-msg');
+let restart_game = document.getElementById('btn-modal');
 
 let size = Dictionary.length;
 let index = randomPosition(size);
@@ -13,5 +16,4 @@ let clues = Dictionary[index].clue;
 let hits = 0;
 let chance = 6;
 let hangman = 0;
-
 let position;

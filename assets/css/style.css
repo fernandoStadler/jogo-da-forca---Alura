@@ -10,11 +10,16 @@
     font-family: 'Bebas Neue', cursive;
 }
 
+body{
+    overflow-x: hidden;
+    background-color: var(--dark-secondary);
+
+
+}
 main {
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: var(--dark-secondary);
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -26,14 +31,40 @@ main {
     display: flex;
     width: 100%;
     height: 50px;
-    align-items: center;
+    justify-content: space-between;
     background-color: var(--bg-purple);
 }
+#logo {
+    width: 40px;
+}
+#left-header-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
 
-#header>label {
+#left-header-icon>label {
     font-size: 25px;
     margin: 25px;
     color: white;
+}
+
+#right-header-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+#right-header-icon>button{
+ width: 150px;
+ background-color: #14f132;
+}
+#right-header-icon>button:hover{
+
+ background-color: #0bc023;
 }
 
 #gallows {
@@ -77,7 +108,6 @@ main {
     align-items: flex-end;
     width: 100%;
     flex-wrap: wrap;
-
     justify-content: center;
     align-items: center;
 }
@@ -93,4 +123,160 @@ main {
 #tip{
    color: white;
    font-size:35px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #0000ff;
+    width: 40px;
+    margin: 5px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    width: 35px;
+    padding: 10px 0;
+    background-color: #663399;
+    box-shadow: 0px 0px 15px #663399;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #0682ac;
+}
+
+.certa,
+.certa:hover {
+    background: #14f132;
+    border: 1px solid #0682ac;
+    cursor: inherit;
+}
+
+.errada,
+.errada:hover {
+    background: #DC1F27;
+    border: 1px solid #DC1F27;
+    cursor: inherit;
+}
+
+#btns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #181818;
+    justify-content: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+#dark {
+    flex-wrap: wrap;
+    color: white;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.808);
+    height: 100vh;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal {
+    display: flex;
+    background-color: #663399;
+    box-shadow: 0px 0px 34px #663399;
+    width: 350px;
+    height: 250px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    font-size: 35px;
+}
+
+#m-button>button {
+    width: 250px;
+    background-color: #14f132;
+    box-shadow: 0px 0px 34px #14f132;
+    border-radius: 10px;
+    font-size: 35px;
+}
+
+#m-button>button:hover {
+    background-color: #07c520
+}
+@media(max-width:1200px) {
+    #tip {
+        display: flex;
+        width: 100%;
+        height: 150px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+}
+
+@media(max-width:800px) {
+    * {
+        width: 100%;
+    }
+
+    main {
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    #gallows {
+        width: 90%;
+    }
+
+    #tip {
+        display: flex;
+        width: 100%;
+        height: 150px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #modal {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    #btn-modal {
+        margin: 0 auto;
+    }
+    #modal-msg {
+        text-align: center;
+    }
+  
+  
 }

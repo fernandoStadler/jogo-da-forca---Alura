@@ -1,152 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/fav/site.webmanifest">
     <title>Hangman</title>
 </head>
 
 <body>
     <style>
-     span {
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px solid #0000ff;
-    width: 40px;
-    margin: 5px;
-    padding-bottom: 10px;
-    font-size: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-button {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    width: 35px;
-    padding: 10px 0;
-    background-color: #663399;
-    box-shadow: 0px 0px 15px #663399;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-button:hover {
-    background-color: #0682ac;
-}
-
-button.novo-bt {
-    width: auto;
-    padding: 10px;
-}
-
-.certa, .certa:hover {
-    background: #14f132;
-    border: 1px solid #0682ac;
-    cursor: inherit;
-}
-
-.errada, .errada:hover {
-    background: #DC1F27;
-    border: 1px solid #DC1F27;
-    cursor: inherit;
-}
-
-#btns{
-    display:flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 5px;
-    border-radius: 10px;
-    margin-top: 10px;
-    background-color: #181818;
-    justify-content: center;
-}
-
-#d-tip{
-    
-    margin-top: 2%;
-    display:flex;
-    position: relative;
-}
-
-#modal{
-    display: none;
-    background-color: #663399;
-    box-shadow: 0px 0px 34px #663399;
-    width: 350px;
-    height: 250px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;    
-    position: absolute;
-    z-index: 2;
-    border-radius: 10px;
-    font-size: 35px;
-}
-#dark{
-    display: none;
-    flex-wrap: wrap;
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.808);
-    height: 100vh;
-    z-index: 1;
-}
-#m-button>button{
-    width: 250px;
-    background-color: #14f132;
-    box-shadow: 0px 0px 34px #14f132;
-
-    border-radius: 10px;
-    font-size: 35px;
-}
-</style>
-<header id="header">
-    <label>Hangman</label>
-</header>
-<main>
-    <div id="dark">
-        
-    </div>
-    <section id="gallows">
-        <div id="canva">
-            <canvas width="600" height="400" />
-            width: 250px;
+      
+    </style>
+    <header id="header">
+        <div id="left-header-icon">
+            <img id="logo" src="assets/img/logo.svg" alt="logo">
+            <label>Hangman</label>
+        </div>
+        <div id="right-header-icon">
+            <button id="addWord">Adicionar nova palavra</button>
+        </div>
+    </header>
+    <main>
+        <div id="dark" class="d-none">
+            <section id="modal">
+                <div>
+                    <p id="modal-msg"></p>
+                </div>
+                <div id="m-button">
+                    <button id="btn-modal">Jogar novamente</button>
+                </div>
+            </section>
+        </div>
+        <section id="gallows">
+            <div id="canva">
+                <canvas width="600" height="400" />
+                width: 250px;
             </div>
             <div id="word">
-                
+                <!-- Palavra -->
             </div>
             <div id="btns">
-                
+                <!-- botões -->
             </div>
-            
-            
+
+
         </section>
-        <section id="modal">
-            <div>
-                <p>Parabéns, você ganhou!</p>
-            </div>
-            <div id="m-button">
-                <button>Jogar novamente</button>
-            </div>
-        </section>
+
         <section id="d-tip">
-            <label id="tip"></label>
+            <label id="tip">
+                <!-- Dica -->
+            </label>
         </section>
-        
-        
-        
+
+
+
     </main>
     <footer id="footer">
         <label>&copy; Fernando Stadler - 2022</label>
@@ -155,4 +68,5 @@ button.novo-bt {
     <script src="js/utils.js"></script>
     <script src="js/variable.js"></script>
     <script src="js/app.js"></script>
+
 </html>
