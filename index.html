@@ -24,10 +24,36 @@
             z-index: 1;
             position: absolute;
         }
+        .label_new_word{
+            color: white;
+            font-size: 25px;
+        }
+        .container{
+            width: 80%;
+            flex-wrap: wrap;
+           
+        }.btns_addword{
+
+            display: flex;
+            margin-top: 10px;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        #btn_save{
+            width: 100px;
+            background-color: #14f132;
+            box-shadow: 0px 0px 34px #14f132;
+
+        }
+        #btn_save:hover{
+            background-color: #07c520
+      
+
+        }
         .text_input{
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 10px;
         }
         .show{
             margin-top:0;
@@ -49,12 +75,16 @@
     </header>
     <main>
         <section id="new_word" class="hide">
-            <div class="text_input">
-                Palavra:<input type="text" name="nome" />
-                 Dica:<input type="text" name="sobrenome" />
-            </div>
-            <div class="btns_addword">
-                <button type="button" value="Enviar"> Salvar </button>
+            <div class="container">
+                <div class="text_input">
+                    <label class="label_new_word">Palavra:</label>
+                    <input type="text" name="word" />
+                    <label class="label_new_word">Dica:</label>
+                     <input type="text" name="tip" />
+                </div>
+                <div class="btns_addword">
+                    <button id="btn_save" type="button" value="Enviar"> Salvar </button>
+                </div>
             </div>
         </section>
         <div id="dark" class="d-none">
