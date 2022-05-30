@@ -4,6 +4,8 @@ let canvas = document.querySelector('canvas');
 let darkScreen = document.getElementById('dark');
 let modal_alert = document.getElementById('modal-msg');
 let restart_game = document.getElementById('btn-modal');
+let divNewWord = document.getElementById('new_word');
+let btnAddWord = document.getElementById('addWord');
 
 let size = Dictionary.length;
 let index = randomPosition(size);

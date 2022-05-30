@@ -29,6 +29,8 @@ main {
     height: 50px;
     justify-content: space-between;
     background-color: var(--bg-purple);
+    position: relative;
+    z-index: 2;
 }
 #logo {
     width: 40px;

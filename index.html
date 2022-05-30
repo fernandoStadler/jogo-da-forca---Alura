@@ -12,6 +12,32 @@
     <title>Hangman</title>
 </head>
 <body>
+    <style>
+        #new_word{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background-color:#212529;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            position: absolute;
+        }
+        .text_input{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .show{
+            margin-top:0;
+            transition:  margin-top 2s;  
+        }
+        .hide{
+            margin-top:-300%;
+            transition:  margin-top 2s;  
+        }
+    </style>
     <header id="header">
         <div id="left-header-icon">
             <img id="logo" src="assets/img/logo.svg" alt="logo">
@@ -22,6 +48,15 @@
         </div>
     </header>
     <main>
+        <section id="new_word" class="hide">
+            <div class="text_input">
+                Palavra:<input type="text" name="nome" />
+                 Dica:<input type="text" name="sobrenome" />
+            </div>
+            <div class="btns_addword">
+                <button type="button" value="Enviar"> Salvar </button>
+            </div>
+        </section>
         <div id="dark" class="d-none">
             <section id="modal">
                 <div>

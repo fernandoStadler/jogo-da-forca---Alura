@@ -64,6 +64,17 @@ function chooseLetter(chosenLetter) {
     }
 }
 
+function addword(){
+    if(divNewWord.classList.contains('hide')){
+        divNewWord.classList.remove('hide');
+        divNewWord.classList.add('show');
+    } else{
+        divNewWord.classList.add('hide');
+        divNewWord.classList.remove('show');
+    }
+}
+
+btnAddWord.onclick = addword;
 draw(3, 5, 200, 4, "blue");
 draw(200, 5, 3, 100, "blue");
 draw(3, 5, 4, 350, "blue");

@@ -21,13 +21,10 @@ function line(axiosX, axiosY, width, height, color) {
     pincel.lineTo(width, height);
     pincel.stroke();
 }
-
-
 function randomWord() {
      words = Dictionary[index].word;
      clues = Dictionary[index].clue;
 }
-
 function modal(msg) {
     darkScreen.classList.remove("d-none");
     darkScreen.classList.add("d-flex");
