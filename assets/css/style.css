@@ -69,7 +69,6 @@ main {
     display: flex;
     width: 50%;
     background-color: rgb(218, 218, 218);
-    box-shadow: 10px 1px 50px 5px #663399;
     height: 70vh;
     align-self: center;
     margin: 0 auto;
@@ -90,12 +89,18 @@ main {
 #footer {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 15vh;
+    justify-content:center;
     align-items: center;
+    text-align: center;
+    flex-direction: column;
     background-color: var(--bg-purple);
+    position: relative;
+    gap:10px;
+    z-index: 2;
 }
 
-#footer>label {
+#lb-footer {
     font-size: 25px;
     margin: auto;
     color: white;
@@ -190,12 +195,13 @@ button:hover {
     display: flex;
 }
 
+
 #dark {
     flex-wrap: wrap;
     color: white;
     position: absolute;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.808);
+    background-color: rgba(0, 0, 0, 0.986);
     height: 100vh;
     z-index: 1;
     justify-content: center;
@@ -227,6 +233,57 @@ button:hover {
 #m-button>button:hover {
     background-color: #07c520
 }
+
+#new_word {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #212529;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+}
+
+.label_new_word {
+    color: white;
+    font-size: 25px;
+}
+
+.container {
+    width: 80%;
+    flex-wrap: wrap;
+}
+.btns_addword {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#btn_save {
+    width: 100px;
+    background-color: #14f132;
+    box-shadow: 0px 0px 34px #14f132;
+}
+
+#btn_save:hover {
+    background-color: #07c520
+}
+.text_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.show {
+    margin-top: 0;
+    transition: margin-top 1.5s;
+}
+.hide {
+    margin-top: -300%;
+    transition: margin-top 1.5s;
+}
 @media(max-width:1200px) {
     #tip {
         display: flex;
@@ -238,7 +295,7 @@ button:hover {
 
 }
 
-@media(max-width:800px) {
+@media(max-width:845px) {
     * {
         width: 100%;
     }
@@ -251,7 +308,9 @@ button:hover {
     }
 
     #gallows {
+        margin-top: 10%;
         width: 90%;
+        height: auto;
     }
 
     #tip {
@@ -263,17 +322,30 @@ button:hover {
     }
 
     #modal {
-        width: 100%;
+        width: 90%;
         justify-content: center;
         align-items: center;
     }
-  
+  #dark{
+    width: 100%;
+    height: 120vh;
+    top:0;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.88);
+
+  }
     #btn-modal {
         margin: 0 auto;
     }
     #modal-msg {
         text-align: center;
     }
-  
-  
+    
+    #footer{
+        margin-top: 20vh;
+    }
+    #group-footer{
+        display: none !important ;
+   
+    }
 }

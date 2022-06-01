@@ -1,4 +1,42 @@
 
+function screenAddword(){
+    if(divNewWord.classList.contains('hide')){
+        divNewWord.classList.remove('hide');
+        divNewWord.classList.add('show');
+        addWord.innerHTML  = "Fechar";
+    } else{
+        divNewWord.classList.add('hide');
+        divNewWord.classList.remove('show');
+        addWord.innerHTML  = "Adicionar nova palavra";
+    }
+}
+
+function addWords(){
+    var tWord = txt_addWord.value
+    var tClue = txt_addClue.value
+    var dataStorage = localStorage.getItem("Lista")
+    dataStorage = dataStorage ? dataStorage.split(',') : [JSON.stringify(Dictionary)];
+    dataStorage.push(JSON.stringify({"word":`"${tWord}"`, "clue":`${tClue}`}))
+    localStorage.setItem("Lista", dataStorage);
+    console.table(dataStorage);
+} 
+btnSave.onclick = addWords;
+// // 
+// function testando(){
+//     var tWord = txt_addWord.value
+//     var tClue = txt_addClue.value
+//     var lista = [];
+//     var retorno =[];
+//     retorno [1] = lista.push(JSON.stringify({"word":tWord, "clue":tClue}));
+
+//     console.log(lista);
+  
+// }
+
+// btnSave.onclick = testando;
+// // document.getElementById("teste").onclick = testando;
+
+
 for (position = 0; position < words.length; position++) {
     let span = document.createElement("span");
     span.setAttribute('id', position);
@@ -64,20 +102,10 @@ function chooseLetter(chosenLetter) {
     }
 }
 
-function addword(){
-    if(divNewWord.classList.contains('hide')){
-        divNewWord.classList.remove('hide');
-        divNewWord.classList.add('show');
-    } else{
-        divNewWord.classList.add('hide');
-        divNewWord.classList.remove('show');
-    }
-}
-
-btnAddWord.onclick = addword;
 draw(3, 5, 200, 4, "blue");
 draw(200, 5, 3, 100, "blue");
 draw(3, 5, 4, 350, "blue");
 
+btnAddWord.onclick = screenAddword;
 tip.innerHTML = `dica: ${clues}`;
 restart_game.onclick = restart;

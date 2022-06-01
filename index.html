@@ -12,58 +12,6 @@
     <title>Hangman</title>
 </head>
 <body>
-    <style>
-        #new_word{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100vh;
-            background-color:#212529;
-            justify-content: center;
-            align-items: center;
-            z-index: 1;
-            position: absolute;
-        }
-        .label_new_word{
-            color: white;
-            font-size: 25px;
-        }
-        .container{
-            width: 80%;
-            flex-wrap: wrap;
-           
-        }.btns_addword{
-
-            display: flex;
-            margin-top: 10px;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        #btn_save{
-            width: 100px;
-            background-color: #14f132;
-            box-shadow: 0px 0px 34px #14f132;
-
-        }
-        #btn_save:hover{
-            background-color: #07c520
-      
-
-        }
-        .text_input{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .show{
-            margin-top:0;
-            transition:  margin-top 2s;  
-        }
-        .hide{
-            margin-top:-300%;
-            transition:  margin-top 2s;  
-        }
-    </style>
     <header id="header">
         <div id="left-header-icon">
             <img id="logo" src="assets/img/logo.svg" alt="logo">
@@ -78,9 +26,9 @@
             <div class="container">
                 <div class="text_input">
                     <label class="label_new_word">Palavra:</label>
-                    <input type="text" name="word" />
+                    <input type="text" id="txt_addWord" name="word" />
                     <label class="label_new_word">Dica:</label>
-                     <input type="text" name="tip" />
+                    <input type="text" id="txt_addClue" name="tip" />
                 </div>
                 <div class="btns_addword">
                     <button id="btn_save" type="button" value="Enviar"> Salvar </button>
@@ -100,7 +48,6 @@
         <section id="gallows">
             <div id="canva">
                 <canvas width="600" height="400" />
-                width: 250px;
             </div>
             <div id="word">
                 <!-- Palavra -->
@@ -114,13 +61,42 @@
                 <!-- Dica -->
             </label>
         </section>
+        
     </main>
-    <footer id="footer">
-        <label id="lb-footer">&copy; Fernando Stadler - 2022</label>
+    <style>
+     .fa-linkedin{
+            color: rgb(255, 255, 255);
+
+        }
+        .fa-linkedin:hover {
+            color: rgb(207, 207, 207);
+        }
+        .fa-github{
+            color: rgb(255, 255, 255);
+
+        }
+        .fa-github:hover {
+            color: rgb(207, 207, 207);
+        }
+        #group-footer{
+            display: flex;
+            gap:5px;
+            margin: auto;
+        }
+    </style>
+    <footer id="footer">     
+        <div id="group-footer">
+            <a href="https://github.com/fernandoStadler" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a href="https://www.linkedin.com/in/fernandostadler/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+               
+        </div>
+        <div>
+            <label id="lb-footer">&copy; Fernando Stadler - 2022</label>
+        </div>
     </footer>
+    <script src="https://kit.fontawesome.com/67f504bb87.js" crossorigin="anonymous"></script>
     <script src="js/dictionary.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/variable.js"></script>
     <script src="js/app.js"></script>
-
 </html>
