@@ -1,6 +1,6 @@
 ### 
   <div style="display:flex;" align="center">
-   <h1> Alura Challenge Oracle One - Jogo da Forcae</h2>
+   <h1> Alura Challenge Oracle One - Jogo da Forca</h2>
  </div>
 
  <div style="display:flex;" align="center">
