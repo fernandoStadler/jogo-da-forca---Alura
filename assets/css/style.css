@@ -383,4 +383,11 @@ text-align: center;
         display: none !important ;
    
     }
+
+    #div_new_word{
+        margin-top:5px;
+        width: 90%;
+        height: 50px;
+    
+    }
 }
