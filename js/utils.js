@@ -1,6 +1,11 @@
 function randomPosition(size) {
     return Math.round(Math.random() * (size - 1));
 }
+function filter(word) {
+    const Regex = /^[A-Z\s]+$/;
+    var getWord  = Regex.test(word);
+    return getWord;
+}
 function draw(axiosX, axiosY, width, height, color) {
     const pincel = canvas.getContext('2d');
     pincel.fillStyle = color;
@@ -34,4 +39,24 @@ function restart() {
     randomWord();
     document.location.reload();
 }
+function cleanForm(){
+    txt_addWord.value = " ";
+    txt_addClue.value = " ";
+        
+} cleanForm();
+
+function validateForm() {
+    var clue = txt_addClue.value
+    .toUpperCase();
+    var word = txt_addWord.value.toUpperCase();
+    if(filter(clue)  === false){
+        txt_addClue.value = " ";
+    } if(filter(word) === false){
+        txt_addWord.value = " ";
+    }   
+}
+
+    
+txt_addClue.oninput = validateForm;
+txt_addWord.oninput = validateForm;
 

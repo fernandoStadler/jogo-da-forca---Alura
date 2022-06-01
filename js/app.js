@@ -9,8 +9,12 @@ function screenAddword(){
         divNewWord.classList.remove('show');
         addWord.innerHTML  = "Adicionar nova palavra";
     }
+    
 }
-
+function showDivNewWord(){
+    div_new_word.classList.remove('d-flex')
+    div_new_word.classList.add('d-none')
+}
 function addWords(){
     var tWord = txt_addWord.value
     var tClue = txt_addClue.value
@@ -19,24 +23,11 @@ function addWords(){
     dataStorage.push(JSON.stringify({"word":`"${tWord}"`, "clue":`${tClue}`}))
     localStorage.setItem("Lista", dataStorage);
     console.table(dataStorage);
+    div_new_word.classList.add('d-flex')
+    addWord_label.innerHTML =  `A Palavra ${tWord} e a Dica ${tClue} foram adicionada com sucesso!`
+    setInterval(showDivNewWord,5000)
 } 
 btnSave.onclick = addWords;
-// // 
-// function testando(){
-//     var tWord = txt_addWord.value
-//     var tClue = txt_addClue.value
-//     var lista = [];
-//     var retorno =[];
-//     retorno [1] = lista.push(JSON.stringify({"word":tWord, "clue":tClue}));
-
-//     console.log(lista);
-  
-// }
-
-// btnSave.onclick = testando;
-// // document.getElementById("teste").onclick = testando;
-
-
 for (position = 0; position < words.length; position++) {
     let span = document.createElement("span");
     span.setAttribute('id', position);

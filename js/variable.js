@@ -9,7 +9,9 @@ let btnAddWord = document.getElementById('addWord');
 let btnSave = document.getElementById('btn_save');
 let txt_addWord = document.getElementById('txt_addWord');
 let txt_addClue = document.getElementById('txt_addClue');
-let list = localStorage.setItem("Lista", JSON.stringify(Dictionary))
+let list = localStorage.setItem("Lista", JSON.stringify(Dictionary));
+let addWord_label = document.getElementById("addWord_label");
+let div_new_word = document.getElementById("div_new_word");
 
 
 let size = Dictionary.length;
