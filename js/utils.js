@@ -54,9 +54,7 @@ function validateForm() {
     } if(filter(word) === false){
         txt_addWord.value = " ";
     }   
-}
-
-    
+}  
 txt_addClue.oninput = validateForm;
 txt_addWord.oninput = validateForm;
 

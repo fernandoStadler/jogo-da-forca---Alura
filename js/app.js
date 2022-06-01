@@ -4,12 +4,13 @@ function screenAddword(){
         divNewWord.classList.remove('hide');
         divNewWord.classList.add('show');
         addWord.innerHTML  = "Fechar";
+        cleanForm();
     } else{
         divNewWord.classList.add('hide');
         divNewWord.classList.remove('show');
         addWord.innerHTML  = "Adicionar nova palavra";
-    }
-    
+        cleanForm();
+    }  
 }
 function showDivNewWord(){
     div_new_word.classList.remove('d-flex')
@@ -24,8 +25,10 @@ function addWords(){
     localStorage.setItem("Lista", dataStorage);
     console.table(dataStorage);
     div_new_word.classList.add('d-flex')
-    addWord_label.innerHTML =  `A Palavra ${tWord} e a Dica ${tClue} foram adicionada com sucesso!`
+    addWord_label.innerHTML =  `A Palavra <label style="color:red">${tWord}</label> e a Dica <label style="color:red">${tClue}</label> foram adicionadas com sucesso!`
+    cleanForm()
     setInterval(showDivNewWord,5000)
+    
 } 
 btnSave.onclick = addWords;
 for (position = 0; position < words.length; position++) {
